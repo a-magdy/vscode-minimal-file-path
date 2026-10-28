@@ -2,7 +2,8 @@
 
 ## 0.2.1
 
-- New `clickAction` value `revealInOS`: show the file in Finder / File Explorer. `reveal` still highlights it in VS Code's Explorer sidebar.
+- New `clickAction` value `revealInOS`: show the file in Finder / File Explorer.
+- Removed the `reveal` value of `clickAction` (it only highlighted the file in VS Code's Explorer, which `explorer.autoReveal` already does). A stored `reveal` now behaves like `copy`; switch to `revealInOS` if you want the file manager.
 - Copying now shows a brief "Path copied" message in the status bar.
 
 ## 0.2.0

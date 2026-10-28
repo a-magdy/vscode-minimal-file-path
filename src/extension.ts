@@ -20,7 +20,6 @@ export function activate(context: vscode.ExtensionContext) {
 
   const tooltips: Record<string, string> = {
     copy: "Click to copy path",
-    reveal: "Click to reveal in Explorer",
     revealInOS: "Click to reveal in the OS file manager",
   };
 
@@ -32,7 +31,7 @@ export function activate(context: vscode.ExtensionContext) {
 
     if (input instanceof vscode.TabInputTextDiff) {
       current = `${toPath(input.original)} ↔ ${toPath(input.modified)}`;
-      currentUri = input.modified;
+      currentUri = input.modified.scheme === "file" ? input.modified : undefined;
       item.text = `$(git-compare) ${current}`;
     } else if (input instanceof vscode.TabInputText && input.uri.scheme === "file") {
       current = toPath(input.uri);
@@ -51,8 +50,6 @@ export function activate(context: vscode.ExtensionContext) {
 
   const click = () => {
     switch (config().get("clickAction")) {
-      case "reveal":
-        return vscode.commands.executeCommand("workbench.files.action.showActiveFileInExplorer");
       case "revealInOS":
         return currentUri && vscode.commands.executeCommand("revealFileInOS", currentUri);
       default:

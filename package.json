@@ -65,12 +65,10 @@
           "type": "string",
           "enum": [
             "copy",
-            "reveal",
             "revealInOS"
           ],
           "enumDescriptions": [
             "Copy the path to the clipboard.",
-            "Reveal the file in VS Code's Explorer sidebar.",
             "Reveal the file in Finder / File Explorer / the system file manager."
           ],
           "default": "copy",

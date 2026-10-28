@@ -7,7 +7,7 @@ A minimalist, zero-dependency active file path and diff indicator for your statu
 
 - **Active file path** in the status bar, with a native `$(file)` icon.
 - **Diff view support**: shows `original ↔ modified` using the modern Tab API.
-- **Click to copy** the path (or both paths in a diff) to the clipboard, or reveal the file in the Explorer.
+- **Click to copy** the path (or both paths in a diff) to the clipboard, or show the file in Finder / File Explorer.
 - **Absolute or workspace-relative** paths.
 - **Zero runtime dependencies**: only the native `vscode` API, a single small source file.
 
@@ -22,7 +22,7 @@ A minimalist, zero-dependency active file path and diff indicator for your statu
 | Setting | Default | Description |
 | --- | --- | --- |
 | `minimalFilePath.pathStyle` | `absolute` | `absolute` or `relative` (to the workspace folder). |
-| `minimalFilePath.clickAction` | `copy` | `copy` the path (shows a brief "Path copied" message), `reveal` the file in VS Code's Explorer sidebar, or `revealInOS` to show it in Finder / File Explorer. Reveal options do nothing for untitled files. |
+| `minimalFilePath.clickAction` | `copy` | `copy` the path (shows a brief "Path copied" message), or `revealInOS` to show the file in Finder / File Explorer. In a diff, `copy` copies both paths (`original ↔ modified`) and `revealInOS` reveals the modified file. `revealInOS` does nothing for untitled or non-file (for example `git:`) files. |
 
 ## Why not just breadcrumbs?
 
