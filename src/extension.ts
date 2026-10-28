@@ -26,7 +26,7 @@ export function activate(context: vscode.ExtensionContext) {
   const update = () => {
     const tab = vscode.window.tabGroups.activeTabGroup.activeTab;
     const input = tab?.input;
-    item.tooltip = tooltips[config().get<string>("clickAction", "copy")];
+    item.tooltip = tooltips[config().get<string>("clickAction", "copy")] ?? tooltips.copy;
     currentUri = undefined;
 
     if (input instanceof vscode.TabInputTextDiff) {
