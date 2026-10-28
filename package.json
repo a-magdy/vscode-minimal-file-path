@@ -15,8 +15,7 @@
   },
   "homepage": "https://a-magdy.github.io/vscode-minimal-file-path/",
   "engines": {
-    "vscode": "^1.90.0",
-    "node": ">=24"
+    "vscode": "^1.90.0"
   },
   "galleryBanner": {
     "color": "#1e1e1e",
