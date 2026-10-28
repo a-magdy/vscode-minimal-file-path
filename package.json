@@ -13,7 +13,7 @@
   "bugs": {
     "url": "https://github.com/a-magdy/vscode-minimal-file-path/issues"
   },
-  "homepage": "https://github.com/a-magdy/vscode-minimal-file-path#readme",
+  "homepage": "https://a-magdy.github.io/vscode-minimal-file-path/",
   "engines": {
     "vscode": "^1.90.0",
     "node": ">=24"
