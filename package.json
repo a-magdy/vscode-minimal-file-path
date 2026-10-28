@@ -2,7 +2,7 @@
   "name": "minimal-file-path",
   "displayName": "Minimal File Path",
   "description": "A minimalist, zero-dependency active file path and diff indicator for your status bar.",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "publisher": "magdyoss",
   "license": "MIT",
   "icon": "icon.png",
@@ -65,10 +65,14 @@
           "type": "string",
           "enum": [
             "copy",
-            "reveal"
+            "revealInOS"
+          ],
+          "enumDescriptions": [
+            "Copy the path to the clipboard.",
+            "Reveal the file in Finder / File Explorer / the system file manager."
           ],
           "default": "copy",
-          "description": "What clicking the status bar item does: copy the path, or reveal the file in the Explorer."
+          "description": "What clicking the status bar item does."
         }
       }
     }

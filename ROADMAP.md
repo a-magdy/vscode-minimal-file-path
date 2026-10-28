@@ -1,6 +1,6 @@
 # Roadmap
 
-v1 is deliberately small: active path, diff view, click to copy. Done since: relative/absolute path setting and a reveal-in-Explorer click action (0.2.0). Ideas for later, each using native APIs only:
+v1 is deliberately small: active path, diff view, click to copy. Done since: relative/absolute path setting and a reveal-in-file-manager click action (0.2.0, 0.2.1). Ideas for later, each using native APIs only:
 
 - **Read-only indicator:** check `vscode.workspace.fs.stat()` and append `$(lock)` for read-only files. Only catches files read-only on disk, not VS Code's own read-only views; declare `capabilities.virtualWorkspaces`.
 - **File size:** show the size from `fs.stat()`, refreshed on `vscode.workspace.onDidSaveTextDocument`. Stale until saved.
