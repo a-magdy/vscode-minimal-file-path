@@ -2,7 +2,7 @@
   "name": "minimal-file-path",
   "displayName": "Minimal File Path",
   "description": "A minimalist, zero-dependency active file path and diff indicator for your status bar.",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "publisher": "magdyoss",
   "license": "MIT",
   "icon": "icon.png",
@@ -49,7 +49,30 @@
         "command": "minimalFilePath.copy",
         "title": "Minimal File Path: Copy Active Path"
       }
-    ]
+    ],
+    "configuration": {
+      "title": "Minimal File Path",
+      "properties": {
+        "minimalFilePath.pathStyle": {
+          "type": "string",
+          "enum": [
+            "absolute",
+            "relative"
+          ],
+          "default": "absolute",
+          "description": "Show the absolute path or the path relative to the workspace folder."
+        },
+        "minimalFilePath.clickAction": {
+          "type": "string",
+          "enum": [
+            "copy",
+            "reveal"
+          ],
+          "default": "copy",
+          "description": "What clicking the status bar item does: copy the path, or reveal the file in the Explorer."
+        }
+      }
+    }
   },
   "scripts": {
     "compile": "tsc -p .",
