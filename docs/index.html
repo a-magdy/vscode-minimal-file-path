@@ -30,8 +30,10 @@
       --editor-line: #e4e8ec;
       --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
     }
+    :root[data-theme="light"] { color-scheme: light; }
     @media (prefers-color-scheme: dark) {
       :root:not([data-theme="light"]) {
+        color-scheme: dark;
         --bg: #0d1117;
         --surface: #161b22;
         --border: #30363d;
@@ -41,6 +43,17 @@
         --editor-bg: #1e1e1e;
         --editor-line: #2b2b2b;
       }
+    }
+    :root[data-theme="dark"] {
+      color-scheme: dark;
+      --bg: #0d1117;
+      --surface: #161b22;
+      --border: #30363d;
+      --text: #e6edf3;
+      --muted: #9198a1;
+      --accent: #2f81f7;
+      --editor-bg: #1e1e1e;
+      --editor-line: #2b2b2b;
     }
     * { box-sizing: border-box; }
     body {
@@ -52,6 +65,14 @@
     main { max-width: 880px; margin: 0 auto; padding: 0 16px; }
     a { color: var(--accent); }
     code { font-family: var(--mono); }
+
+    #theme {
+      position: absolute; top: 16px; right: 16px; width: 40px; height: 40px; display: grid; place-items: center;
+      cursor: pointer; border-radius: 8px; border: 1px solid var(--border); background: var(--surface); color: var(--text);
+    }
+    #theme svg { width: 20px; height: 20px; stroke: currentColor; fill: none; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; }
+    .version { margin: 14px 0 0; min-height: 20px; }
+    .version img { vertical-align: middle; }
 
     .hero { padding: 72px 0 40px; text-align: center; }
     .hero img { border-radius: 12px; }
@@ -96,6 +117,9 @@
   </style>
 </head>
 <body>
+  <button type="button" id="theme" aria-label="Toggle light/dark theme" title="Toggle light/dark theme">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5z"/></svg>
+  </button>
   <main>
     <section class="hero">
       <img src="icon.png" width="64" height="64" alt="">
@@ -105,6 +129,7 @@
         <a class="btn primary" href="https://marketplace.visualstudio.com/items?itemName=magdyoss.minimal-file-path">Install from Marketplace</a>
         <a class="btn" href="https://github.com/a-magdy/vscode-minimal-file-path">View on GitHub</a>
       </div>
+      <p class="version"><a href="https://github.com/a-magdy/vscode-minimal-file-path/releases/latest"><img src="https://img.shields.io/github/v/release/a-magdy/vscode-minimal-file-path?label=latest%20release" alt="Latest release" height="20"></a></p>
       <div class="install">
         <code id="cmd">ext install magdyoss.minimal-file-path</code>
         <button type="button" id="copy">Copy</button>
@@ -155,6 +180,19 @@
   </main>
 
   <script>
+    const root = document.documentElement;
+    try {
+      const saved = localStorage.getItem("theme");
+      if (saved === "light" || saved === "dark") root.dataset.theme = saved;
+    } catch {}
+    document.getElementById("theme").addEventListener("click", () => {
+      const dark = root.dataset.theme
+        ? root.dataset.theme === "dark"
+        : matchMedia("(prefers-color-scheme: dark)").matches;
+      root.dataset.theme = dark ? "light" : "dark";
+      try { localStorage.setItem("theme", root.dataset.theme); } catch {}
+    });
+
     document.getElementById("copy").addEventListener("click", async (e) => {
       try {
         await navigator.clipboard.writeText(document.getElementById("cmd").textContent);
