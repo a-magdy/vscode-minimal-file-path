@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.0
+
+- New setting `minimalFilePath.pathStyle`: show the absolute path (default) or the workspace-relative path.
+- New setting `minimalFilePath.clickAction`: copy the path (default) or reveal the file in the Explorer.
+- Removed the dev-only `engines.node` constraint from the manifest.
+
 ## 0.1.2
 
 - README: remove retired shields.io Marketplace badges.

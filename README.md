@@ -7,7 +7,8 @@ A minimalist, zero-dependency active file path and diff indicator for your statu
 
 - **Active file path** in the status bar, with a native `$(file)` icon.
 - **Diff view support**: shows `original ↔ modified` using the modern Tab API.
-- **Click to copy** the path (or both paths in a diff) to the clipboard.
+- **Click to copy** the path (or both paths in a diff) to the clipboard, or reveal the file in the Explorer.
+- **Absolute or workspace-relative** paths.
 - **Zero runtime dependencies**: only the native `vscode` API, a single small source file.
 
 ## Commands
@@ -16,9 +17,16 @@ A minimalist, zero-dependency active file path and diff indicator for your statu
 | --- | --- |
 | `Minimal File Path: Copy Active Path` | Copies the path shown in the status bar. |
 
+## Settings
+
+| Setting | Default | Description |
+| --- | --- | --- |
+| `minimalFilePath.pathStyle` | `absolute` | `absolute` or `relative` (to the workspace folder). |
+| `minimalFilePath.clickAction` | `copy` | `copy` the path, or `reveal` the file in the Explorer (acts on the active editor; no-op for untitled files). |
+
 ## Why not just breadcrumbs?
 
-Breadcrumbs and `window.title` already show the path. This extension adds an always-visible status bar path, diff view support and click to copy, without any settings.
+Breadcrumbs and `window.title` already show the path. This extension adds an always-visible status bar path, diff view support and click to copy, with no setup required.
 
 ## Links
 
