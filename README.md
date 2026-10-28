@@ -22,7 +22,7 @@ A minimalist, zero-dependency active file path and diff indicator for your statu
 | Setting | Default | Description |
 | --- | --- | --- |
 | `minimalFilePath.pathStyle` | `absolute` | `absolute` or `relative` (to the workspace folder). |
-| `minimalFilePath.clickAction` | `copy` | `copy` the path, or `reveal` the file in the Explorer (acts on the active editor; no-op for untitled files). |
+| `minimalFilePath.clickAction` | `copy` | `copy` the path (shows a brief "Path copied" message), `reveal` the file in VS Code's Explorer sidebar, or `revealInOS` to show it in Finder / File Explorer. Reveal options do nothing for untitled files. |
 
 ## Why not just breadcrumbs?
 

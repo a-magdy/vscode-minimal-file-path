@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.1
+
+- New `clickAction` value `revealInOS`: show the file in Finder / File Explorer. `reveal` still highlights it in VS Code's Explorer sidebar.
+- Copying now shows a brief "Path copied" message in the status bar.
+
 ## 0.2.0
 
 - New setting `minimalFilePath.pathStyle`: show the absolute path (default) or the workspace-relative path.
