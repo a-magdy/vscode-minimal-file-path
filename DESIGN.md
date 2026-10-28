@@ -2,9 +2,8 @@
 
 ## 1. Naming & Identification
 *   **Extension Display Name:** Minimal File Path
-*   **Marketplace ID (Publisher ID):** `minimal-file-path`
+*   **Extension ID:** `magdyoss.minimal-file-path` (publisher `magdyoss`, name `minimal-file-path`)
 *   **GitHub Repository Name:** `vscode-minimal-file-path`
-*   **Local Project Folder Name:** `minimal-file-path`
 
 ## 2. Core Description
 "A minimalist, zero-dependency active file path and diff indicator for your status bar."

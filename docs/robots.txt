@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://a-magdy.github.io/vscode-minimal-file-path/sitemap.xml
