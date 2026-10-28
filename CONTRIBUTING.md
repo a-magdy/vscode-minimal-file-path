@@ -16,10 +16,10 @@ Press `F5` to launch an Extension Development Host.
 
 ### One-time setup
 
-1. Create an Azure DevOps personal access token: organization `All accessible organizations`, scope `Marketplace` → `Manage`.
+1. On the Marketplace publisher page, add a trusted publishing policy for repo `a-magdy/vscode-minimal-file-path` and workflow `release.yml`. No PAT is needed.
 2. Create the publisher `magdyoss` at https://marketplace.visualstudio.com/manage. The ID must match `publisher` in `package.json`.
 3. Create an Open VSX token and the namespace: `npx ovsx create-namespace magdyoss -p <token>`.
-4. Add the repo secrets `VSCE_PAT` and `OVSX_PAT`.
+4. Add the repo secret `OVSX_PAT`.
 
 ### Each release
 
