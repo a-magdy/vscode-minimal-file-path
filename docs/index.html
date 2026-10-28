@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimal File Path - VS Code Extension</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 800px; margin: 0 auto; padding: 2rem; background: #0d1117; color: #c9d1d9; }
+        h1 { color: #58a6ff; display: flex; align-items: center; gap: 15px;}
+        .hero { margin: 2rem 0; text-align: center; }
+        .hero img { max-width: 100%; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.5); }
+        .features { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2rem; }
+        .card { background: #161b22; padding: 1.5rem; border-radius: 6px; border: 1px solid #30363d; }
+        a.button { display: inline-block; background: #238636; color: white; padding: 10px 20px; text-decoration: none; border-radius: 6px; font-weight: bold; margin-top: 1rem; }
+        a.button.secondary { background: #1f6feb; }
+    </style>
+</head>
+<body>
+    <h1><img src="icon.png" width="48"> Minimal File Path</h1>
+    <p>A modern, zero-dependency VS Code extension to display your active file path.</p>
+    
+    <div class="hero">
+        <img src="hero.png" alt="Minimal File Path Demo">
+    </div>
+
+    <div class="features">
+        <div class="card">
+            <h3>🔒 Zero Dependencies</h3>
+            <p>Built 100% on the native VS Code API. No bloat, no supply chain risks, lightning fast.</p>
+        </div>
+        <div class="card">
+            <h3>↔️ Diff View Support</h3>
+            <p>Unlike older extensions, Minimal File Path uses the modern Tab API to extract both paths when viewing a Git comparison.</p>
+        </div>
+    </div>
+
+    <div style="margin-top: 2rem;">
+        <a href="https://github.com/a-magdy/vscode-minimal-file-path" class="button">View on GitHub</a>
+        <a href="https://marketplace.visualstudio.com/items?itemName=magdyoss.minimal-file-path" class="button secondary">Install from Marketplace</a>
+    </div>
+</body>
+</html>

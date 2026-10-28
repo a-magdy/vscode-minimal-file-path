@@ -1,0 +1,59 @@
+{
+  "name": "minimal-file-path",
+  "displayName": "Minimal File Path",
+  "description": "A minimalist, zero-dependency active file path and diff indicator for your status bar.",
+  "version": "0.1.0",
+  "publisher": "magdyoss",
+  "license": "MIT",
+  "icon": "icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/a-magdy/vscode-minimal-file-path.git"
+  },
+  "bugs": {
+    "url": "https://github.com/a-magdy/vscode-minimal-file-path/issues"
+  },
+  "homepage": "https://github.com/a-magdy/vscode-minimal-file-path#readme",
+  "engines": {
+    "vscode": "^1.90.0",
+    "node": ">=24"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "minimal",
+    "lightweight",
+    "file path",
+    "diff",
+    "status bar"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "minimalFilePath.copy",
+        "title": "Minimal File Path: Copy Active Path"
+      }
+    ]
+  },
+  "scripts": {
+    "compile": "tsc -p .",
+    "watch": "tsc -watch -p .",
+    "lint": "eslint src",
+    "package": "vsce package",
+    "vscode:prepublish": "npm run compile"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/vscode": "1.90.0",
+    "@vscode/vsce": "^4.0.0",
+    "eslint": "^10.13.0",
+    "ovsx": "^1.3.0",
+    "typescript": "~6.0.3",
+    "typescript-eslint": "^8.72.1"
+  }
+}
