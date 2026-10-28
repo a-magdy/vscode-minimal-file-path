@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.2
+
+- README: remove retired shields.io Marketplace badges.
+
 ## 0.1.1
 
 - Marketplace listing: new README with status bar preview and badges, gallery banner, extra categories and keywords, Q&A routed to GitHub issues.

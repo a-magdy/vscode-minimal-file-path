@@ -2,8 +2,6 @@
 
 A minimalist, zero-dependency active file path and diff indicator for your status bar.
 
-[![Version](https://img.shields.io/visual-studio-marketplace/v/magdyoss.minimal-file-path)](https://marketplace.visualstudio.com/items?itemName=magdyoss.minimal-file-path)
-[![Installs](https://img.shields.io/visual-studio-marketplace/i/magdyoss.minimal-file-path)](https://marketplace.visualstudio.com/items?itemName=magdyoss.minimal-file-path)
 
 ![Status bar showing the active file path and a diff of two files](https://a-magdy.github.io/vscode-minimal-file-path/statusbar.png)
 
