@@ -2,7 +2,7 @@
   "name": "minimal-file-path",
   "displayName": "Minimal File Path",
   "description": "A minimalist, zero-dependency active file path and diff indicator for your status bar.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "publisher": "magdyoss",
   "license": "MIT",
   "icon": "icon.png",
