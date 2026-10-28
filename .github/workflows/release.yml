@@ -33,11 +33,6 @@ jobs:
       - name: Publish to VS Code Marketplace
         run: npx vsce publish --oidc --packagePath extension.vsix
 
-      - name: Publish to Open VSX
-        run: npx ovsx publish extension.vsix
-        env:
-          OVSX_PAT: ${{ secrets.OVSX_PAT }}
-
       - name: Create GitHub release
         run: gh release create "${GITHUB_REF_NAME}" extension.vsix --generate-notes
         env:
